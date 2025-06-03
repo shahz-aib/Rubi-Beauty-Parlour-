@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Ruby Beauty Parlour - Home</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>Welcome to Ruby Beauty Parlour</h1>
+
+    <div class="gallery">
+      <img src="https://via.placeholder.com/120x100?text=Facial" />
+      <img src="https://via.placeholder.com/120x100?text=Hair" />
+      <img src="https://via.placeholder.com/120x100?text=Makeup" />
+    </div>
+
+    <div class="section">
+      <h2>Book an Appointment</h2>
+      <form id="appointmentForm">
+        <input type="text" placeholder="Your Name" required />
+        <input type="tel" placeholder="Phone Number" required />
+        <select required>
+          <option value="">Select Service</option>
+          <option>Facial</option>
+          <option>Mehndi</option>
+          <option>Eyebrow</option>
+          <option>Hair Styling</option>
+        </select>
+        <input type="date" required />
+        <button type="submit">Book Now</button>
+      </form>
+      <div class="message" id="thankYouMsg"></div>
+    </div>
+  </div>
+
+  <script>
+    document.getElementById("appointmentForm").addEventListener("submit", function(e) {
+      e.preventDefault();
+      document.getElementById("thankYouMsg").innerText = "Thank you! Your appointment is booked.";
+    });
+  </script>
+</body>
+</html>
